@@ -1,0 +1,21 @@
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title"  value="<%= article.title %>" required>
+</div>
+<div class="form-group">
+    <label for="image">Image URL</label>
+    <input type="text" name="image" value="<%= article.image %>" id="image" required>
+</div>
+<div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author"  value="<%= article.author %>" required>
+</div>
+<div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" id="content" required><%= article.content %></textarea>
+</div>
+
+<div class="buttons">
+    <a class="cancel-btn" href="/">Cancel</a>
+    <button type="submit" class="submit-btn">Save</button>
+</div>

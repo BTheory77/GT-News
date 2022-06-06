@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %> 
+    <link rel="stylesheet" type="text/css" href="../styles/article.css">
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header') %> 
+    </header>
+    <div id="overlay"></div>
+    <article>
+        <div class="article-header">
+            <div class="background-img">
+            </div>
+            <h1 class="article-title"><%= articles.title %></h1>
+        </div>
+        <p class="article-text"><%= articles.content %></p>
+            <div class="author-container">
+                <div class="author">
+                    <div class="line"></div><a href="#"><%= articles.author %></a>
+                </div>
+            </div>
+    </article>
+    <footer>
+      <%- include('../partials/footer') %> 
+    </footer>
+
+</body>
+
+</html>

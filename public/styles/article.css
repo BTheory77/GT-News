@@ -1,0 +1,103 @@
+article {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+}
+
+.article-header {
+    width: 100%;
+    position: relative;
+    height: 55vh;
+    background-color: black;
+}
+.background-img {
+    background-image: url(https://picsum.photos/id/237/536/354);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.article-title {
+    z-index: 99;
+    color:white;
+    font-size: 3.5rem;
+    position: absolute;
+    padding-bottom: 0.15em;
+    left: 1em;
+    bottom: 1em;
+}
+.article-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid #d20b05;
+    background-color: rgb(255, 0, 0);
+    display: block;
+}
+article img {
+    width: 100%;
+    height: 40em;
+    opacity: 0.4;
+}
+
+.article-text {
+    max-width: 75ch;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-top: 3em;
+    padding: 1em;
+    background-color: rgba(143, 160, 115, 0.6);
+    border-radius: 5px ;
+}
+.author-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.author-container a {
+    text-decoration: none;
+    color: red;
+}
+.line {
+    margin-bottom: 0.32em;
+}
+br {
+    display: block;
+    content: '';
+    margin-top: 1em;
+}
+@media screen and (max-width: 600px) {
+
+    .article-title {
+        font-size: 2.8rem;;
+    }
+    
+}
+@media screen and (max-width: 470px) {
+
+    .article-title {
+        font-size: 1.9rem;;
+    }
+    .background-img {
+        background-position: 50%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .article-title {
+        left: 0.5em;
+    }
+}

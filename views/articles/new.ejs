@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" type="text/css" href="../styles/form.css">
+
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <div class="form-container">
+        <h1>New Article</h1>
+        <form action="/articles" method="POST" class="form">
+            <%- include('../partials/form_fields'); %>
+        </form>
+    </div>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>

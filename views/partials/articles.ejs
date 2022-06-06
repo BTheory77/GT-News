@@ -1,0 +1,19 @@
+<div class="news-container">
+<% articles.forEach(article => { %> 
+
+        <div class="news">
+            <div class="text-container">
+                <a href="/article">
+                    <h1 class="news-title"><%= article.title %></h1>
+                </a>
+                <p class="news-text"><%= article.content %></p>
+                <div class="author">
+                    <div class="line"></div><a href="#"><%= article.author %> </a>
+                </div>
+            </div>
+            <img src=<%= article.imageURL %>>
+        </div>
+       
+    
+    <% }) %>
+</div>
