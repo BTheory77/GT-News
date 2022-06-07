@@ -90,7 +90,7 @@ nav {
 }
 
 .sections li {
-    padding: 1em;
+    padding: 0.75em;
     list-style-type: none;
     font-size: 1.3rem;
 
@@ -101,7 +101,10 @@ nav {
     color: black;
     transition: 200ms;
 }
-
+.active-link {
+    background-color: #a0b878;
+    border-radius: 5px;
+}
 .sections a:hover {
     color: rgb(102, 95, 95);
 }
@@ -252,7 +255,7 @@ footer {
         width: 100vw;
         border-radius: 0;
         justify-content: space-between;
-
+        text-align: center;
     }
 
     .news img {
