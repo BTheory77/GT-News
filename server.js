@@ -23,10 +23,27 @@ app.get('/home', async (req, res) => {
     res.render('../views/pages/index.ejs', { articles: articles })
 
 })
+app.get('/politics', async (req, res) => {
+    const articles = await Article.find();
+    res.render('../views/pages/politics.ejs', { articles: articles })
 
-app.get('/article', (req, res) => {
-    res.render('../views/pages/article.ejs', { articles: articles })
 })
+app.get('/econonmy', async (req, res) => {
+    const articles = await Article.find();
+    res.render('../views/pages/economy.ejs', { articles: articles })
+
+})
+app.get('/health', async (req, res) => {
+    const articles = await Article.find();
+    res.render('../views/pages/health.ejs', { articles: articles })
+
+})
+app.get('/education', async (req, res) => {
+    const articles = await Article.find();
+    res.render('../views/pages/education.ejs', { articles: articles })
+
+})
+
 app.get('/form', (req, res) => {
     res.render('/views/pages/form.ejs')
 })

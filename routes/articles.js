@@ -25,7 +25,7 @@ res.redirect(`articles/${article.slug}`)
     } catch(e) {
         res.render('../views/articles/new', {article: article});
     }
-    console.log(article)
+
 })
 
 router.delete('/:id', async (req, res) => {
