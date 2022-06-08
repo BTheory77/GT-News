@@ -1,4 +1,9 @@
 const mongoose = require('mongoose');
+const marked = require('marked');
+const slugify = require('slugify');
+const createDomPurify = require('dompurify')
+const { JSDOM } = require('jsdom')
+const dompurify = createDomPurify(new JSDOM().window)
 
 const articleSchema = new mongoose.Schema({
     title: {
@@ -14,13 +19,35 @@ const articleSchema = new mongoose.Schema({
         type: String
     },
     createdAt: {
-      type: Date,
-      default: Date.now
+        type: Date,
+        default: Date.now
     },
     image: {
         required: true,
         type: String
+    },
+
+    slug: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    sanitizedHtml: {
+        type: String,
+        required: true
     }
+})
+
+articleSchema.pre('validate', function (next) {
+    if (this.title) {
+        this.slug = slugify(this.title, { lower: true, strict: true })
+    }
+
+    if (this.content) {
+        this.sanitizedHtml = dompurify.sanitize(marked.parse(this.content))
+    }
+
+    next()
 })
 
 module.exports = mongoose.model('Article', articleSchema)

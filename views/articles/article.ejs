@@ -13,11 +13,11 @@
     <div id="overlay"></div>
     <article>
         <div class="article-header">
-            <div class="background-img">
+            <div class="background-img" style=" background-image: url('<%= article.image %>');">
             </div>
             <h1 class="article-title"><%= article.title %></h1>
         </div>
-        <p class="article-text"><%= article.content %></p>
+        <div class="article-text"><%- article.sanitizedHtml %></div>
             <div class="author-container">
                 <div class="author">
                     <div class="line"></div><a href="#"><%= article.author %></a>

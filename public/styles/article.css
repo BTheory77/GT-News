@@ -17,7 +17,6 @@ nav {
     background-color: black;
 }
 .background-img {
-    background-image: url(https://picsum.photos/id/237/536/354);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -58,6 +57,7 @@ article img {
     padding: 1em;
     background-color: rgba(143, 160, 115, 0.6);
     border-radius: 5px ;
+  
 }
 .author-container {
     display: flex;
@@ -65,7 +65,7 @@ article img {
     justify-content: flex-end;
     padding: 1em;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 2em;
 }
 
 .author-container a {

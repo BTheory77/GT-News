@@ -54,9 +54,9 @@ nav {
 
 .search-container button {
     font-family: 'Open Sans', sans-serif;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 0.4em 1em 0.4em 1em;
     background-color: #6054aa;
-    border: transparent;
+    border: 2px solid #6054aa;
     border-radius: 2px;
     cursor: pointer;
     color: white;
@@ -65,9 +65,12 @@ nav {
 
 .search-container button:hover {
     background-color: #7869d8;
-
+    border-color: #7869d8;
 }
-
+.search-container button:focus {
+    border: 2px solid #473e7c;
+    outline: none;
+}
 .search-container input {
     font-family: 'Open Sans', sans-serif;
     padding: 0.5em 2em 0.5em 0.5em;
@@ -180,6 +183,7 @@ nav {
     padding: 1em;
     background-color: rgba(143, 160, 115, 0.8);
     border-radius: 5px;
+    min-width: 20em;
 }
 
 .text-container a {
@@ -201,7 +205,33 @@ nav {
     margin-top: 0.27em;
     border-radius: 5px;
 }
+.delete-btn {
 
+    margin-top: 1.55em;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5em 1em;
+    background-color:  #3D646F;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 300ms;
+    color: white;
+    outline: none;
+    border: 2px solid #3D646F;
+}
+.delete-btn:hover {
+    background-color: #538282;
+    border-color: #538282;
+}
+.delete-btn:focus {
+    border: 2px solid #2c474e;
+    outline: none;
+    
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .news img {
     width: 30%;
     margin: 2em;
@@ -357,12 +387,16 @@ footer {
 
     .news {
         flex-direction: column;
-
+        
     }
 
     .news img {
         width: 80%;
     }
+    .card-footer {
+        align-self: stretch;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -420,5 +454,11 @@ footer {
 
     .footer-sections a {
         font-size: 0.8rem;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .text-container {
+        min-width: 16em;
     }
 }

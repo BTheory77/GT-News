@@ -1,19 +1,33 @@
 <div class="news-container">
-<% articles.forEach(article => { %> 
+    <% articles.forEach(article=> { %>
+
+
 
         <div class="news">
             <div class="text-container">
-                <a href="./articles/article.ejs">
-                    <h1 class="news-title"><%= article.title %></h1>
+                <a href="/articles/<%= article.slug %>">
+                    <h1 class="news-title">
+                        <%= article.title %>
+                    </h1>
                 </a>
-                <p class="news-text"><%= article.content %></p>
-                <div class="author">
-                    <div class="line"></div><a href="#"><%= article.author %> </a>
+                <div class="news-text">
+                    <%- article.sanitizedHtml %>
+                </div>
+                <div class="card-footer">
+                    <div class="author">
+                        <div class="line"></div><a href="#">
+                            <%= article.author %>
+                        </a>
+                    </div>
+                    <div class="delete-btn-container">
+                        <form action="/articles/<%= article.id%>?_method=DELETE" method="POST"><button type="submit"
+                                class="delete-btn">Delete</button></form>
+                    </div>
                 </div>
             </div>
-            <img src=<%= article.imageURL %>>
+            <img src=<%=article.image %>>
         </div>
-       
-    
-    <% }) %>
+
+        <% }) %>
+
 </div>
