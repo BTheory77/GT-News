@@ -2,7 +2,7 @@
 
 ## GT-news is a website used to post/delete/view articles
 
-## What I implemented? 
+## What did I do? 
 
 <ul>
 <li>Responsive pages</li>
