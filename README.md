@@ -10,7 +10,7 @@
 <li>Delete Article</li>
 </ul>
 
-## What else did I want to add? 
+## What else do I want to add? 
 
 <ul>
 <li>Edit Button</li>
