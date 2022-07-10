@@ -11,6 +11,8 @@ router.get('/:slug', async (req, res) => {
     res.render('articles/article', {article: article});
 })
 
+
+
 router.post('/', async (req, res) => {
 
     let article = new Article({ 
@@ -27,6 +29,8 @@ res.redirect(`articles/${article.slug}`)
     }
 
 })
+
+
 
 router.delete('/:id', async (req, res) => {
     await Article.findByIdAndDelete(req.params.id)
